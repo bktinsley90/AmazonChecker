@@ -1,5 +1,5 @@
 let itemName = prompt("What is the Item Name");
-let basePrice = prompt("What is the Base price");
+let basePrice = Number(prompt("What is the Base price"));
 let blackFriday = prompt("Is it Black Friday?");
 let searchEngine = prompt("Did you find this product through a search engine");
 let compShop = prompt("Did you find this product on a different site?");
@@ -19,7 +19,7 @@ if (blackFriday === "yes"){
 } 
 if (searchEngine === "yes") {
     message2=`We will increase the price by 1% to pay the search engine.`;
-    finalPrice = (finalPrice * 1.01); 
+    finalPrice = (basePrice * 1.01); 
 }
 if (compShop === "yes") {
     message3= `This purchaser is a comparison shopper, so we will reduce the price by 10%.`;
